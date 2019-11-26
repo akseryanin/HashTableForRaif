@@ -42,11 +42,11 @@ public:
 	}
 };
 
-class Dictionary : public HashSet<string, hash_function, equality> {
+class HashTable : public HashSet<string, hash_function, equality> {
 
 	// Complete definition
 public:
-	Dictionary(string filename);
+	HashTable(string filename);
 
 };
 #endif // _HASHTABLE_H_
