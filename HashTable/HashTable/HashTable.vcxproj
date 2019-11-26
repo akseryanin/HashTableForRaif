@@ -152,7 +152,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Hashset.cpp" />
-    <ClCompile Include="HashTable.cpp" />
+    <ClCompile Include="Hashtable.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hashset.h" />
