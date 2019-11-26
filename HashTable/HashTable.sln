@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HashTable", "HashTable\HashTable.vcxproj", "{CA1FCCDD-2D5B-4FDF-B068-11032C9BAD00}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HashTableTests", "HashTableTests\HashTableTests.vcxproj", "{2E723008-F224-411B-B734-7B3C007C6DCA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,14 +21,6 @@ Global
 		{CA1FCCDD-2D5B-4FDF-B068-11032C9BAD00}.Release|x64.Build.0 = Release|x64
 		{CA1FCCDD-2D5B-4FDF-B068-11032C9BAD00}.Release|x86.ActiveCfg = Release|Win32
 		{CA1FCCDD-2D5B-4FDF-B068-11032C9BAD00}.Release|x86.Build.0 = Release|Win32
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Debug|x64.ActiveCfg = Debug|x64
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Debug|x64.Build.0 = Debug|x64
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Debug|x86.ActiveCfg = Debug|Win32
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Debug|x86.Build.0 = Debug|Win32
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Release|x64.ActiveCfg = Release|x64
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Release|x64.Build.0 = Release|x64
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Release|x86.ActiveCfg = Release|Win32
-		{2E723008-F224-411B-B734-7B3C007C6DCA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,9 @@
 #include "pch.h"
 #include <vector>
 #include <functional>
+#include <iostream>
+#include <fstream>
+#include <string>
 
 #include "../HashTable/Hashtable.h"
 
