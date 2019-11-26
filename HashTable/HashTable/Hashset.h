@@ -18,18 +18,18 @@ class  HashSet {
 protected:
 	class Entry {
 	public:
-		key_type key;
-		bool used;
-		bool deleted;
+		key_type key; 
+		bool used; //использован ли элемент
+		bool deleted; //удален ли элемент
 		Entry() : used(false), deleted(false) {}
 	};
 
-	int entries;      // number of entries
-	int prime;        // index to size table
+	int entries;      //число добавленных
+	int prime;        //индекс простого числа
 
 	vector<Entry>* ht;
-	hash_func hf;        // hash function on key_type
-	key_equal eq;        // equality predicate on key_type
+	hash_func hf;        //класс обертка для изменения хеш функции
+	key_equal eq;        //класс оберетка для изменения компаратора
 
 	int table_size()  const { return prime_list[prime]; } //память выделена под такое число элементов
 	float load_factor() const { return float(size()) / table_size(); } //загруженность таблицы
