@@ -1,2 +1,2 @@
 # HashTableForRaif
-Hashtable for raifasenbank
+Hashtable for raiffeisenbank
