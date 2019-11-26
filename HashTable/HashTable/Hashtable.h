@@ -19,7 +19,6 @@ public:
 
 	unsigned int operator()(const string& s)  const {
 
-
 		unsigned int hash = 0;
 
 		for (unsigned int i = 0; i < s.size(); ++i) {
