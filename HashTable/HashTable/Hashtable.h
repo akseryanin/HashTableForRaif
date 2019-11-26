@@ -13,6 +13,8 @@
 
 using namespace std;
 
+
+//Хеш функция с возможностью ее изменения
 class hash_function
 {
 public:
@@ -31,6 +33,8 @@ public:
 	}
 };
 
+
+//Сравнение с возможностью изменения
 class equality
 {
 public:
@@ -41,9 +45,10 @@ public:
 	}
 };
 
+
+//Для удобства будем читать все из файла
 class HashTable : public HashSet<string, hash_function, equality> {
 
-	// Complete definition
 public:
 	HashTable(string filename);
 

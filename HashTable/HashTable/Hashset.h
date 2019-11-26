@@ -10,11 +10,12 @@
 
 using namespace std;
 
+
+//Заголовок для хешсета
 template<class key_type, class hash_func, class key_equal>
 class  HashSet {
 
 protected:
-	// hashtable entries 
 	class Entry {
 	public:
 		key_type key;
@@ -30,16 +31,18 @@ protected:
 	hash_func hf;        // hash function on key_type
 	key_equal eq;        // equality predicate on key_type
 
-	int table_size()  const { return prime_list[prime]; }
-	float load_factor() const { return float(size()) / table_size(); }
-	int resize();
+	int table_size()  const { return prime_list[prime]; } //память выделена под такое число элементов
+	float load_factor() const { return float(size()) / table_size(); } //загруженность таблицы
+	int resize(); //увеличиваем размер, чтобы таблица "не тормозила"
+	//обоснование этого в readme
 
 public:
-	// we do not compute prime numbers but use a table instead
+	// предподсчитанный массив простых чисел
 	static const int num_primes;
 	static const unsigned long prime_list[];
 
 	HashSet() : entries(0), prime(0), ht(new vector<Entry>(prime_list[0])) {};
+
 
 	virtual ~HashSet() {
 		delete ht;

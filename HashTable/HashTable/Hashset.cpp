@@ -18,15 +18,16 @@ bool HashSet<key_type, hash_func, key_equal>::search(const key_type& k)
 {
 	int p = hf(k) % table_size();
 
+	//считаем хеш и идем дальше, если такой хеш занят
 	while ((*ht)[p].used)
 	{
-		if (eq((*ht)[p].key, k) && !(*ht)[p].deleted)      // equality predicate for key_type
+		if (eq((*ht)[p].key, k) && !(*ht)[p].deleted)
 			return true;
 
 		p++;
 		if (p == table_size())
 		{
-			p = 0;  // wrap around to beginning
+			p = 0;
 		}
 	}
 
@@ -38,11 +39,12 @@ void HashSet<key_type, hash_func, key_equal>::remove(const key_type& k)
 {
 	int p = hf(k) % table_size();
 
+	//считаем хеш и идем дальше, если такой хеш занят
 	while ((*ht)[p].used)
 	{
 		if (eq((*ht)[p].key, k) && !(*ht)[p].deleted)
 		{
-			(*ht)[p].deleted = true;
+			(*ht)[p].deleted = true; //удаляем если нашли
 			return;
 		}
 
@@ -59,14 +61,14 @@ void HashSet<key_type, hash_func, key_equal>::remove(const key_type& k)
 template<class key_type, class hash_func, class key_equal>
 void HashSet<key_type, hash_func, key_equal>::insert(const key_type& k)
 {
-
-	if (load_factor() > .7) {
+	//Если сет заполнен более чем на 70% то увеличим его размерность до след простого числа
+	if (load_factor() > 0.7)
 		resize();
-	}
 
 
 	int p = hf(k) % table_size();
 
+	////считаем хеш и идем дальше, если такой хеш занят
 	while ((*ht)[p].used)
 	{
 		if ((*ht)[p].deleted)
@@ -96,6 +98,7 @@ int HashSet<key_type, hash_func, key_equal>::resize() {
 		exit(2);
 	}
 
+	//делаем пустой сет большего размера и пихаем туда элементы поочередно
 	unsigned int mm = prime_list[prime];
 	prime++;
 	unsigned int m = prime_list[prime];
